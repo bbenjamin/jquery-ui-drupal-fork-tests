@@ -7,6 +7,7 @@ var component = grunt.option( "component" ) || "**";
 grunt.loadNpmTasks("grunt-contrib-qunit");
 
 grunt.initConfig({
+	pkg: grunt.file.readJSON("package.json"),
 	qunit: {
 		files: ["tests/unit/" + component + "/*.html"],
 		options: {
