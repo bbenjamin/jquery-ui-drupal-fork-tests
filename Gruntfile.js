@@ -4,7 +4,7 @@ module.exports = function( grunt ) {
 
 var component = grunt.option( "component" ) || "**";
 
-grunt.loadNpmTasks("grunt-contrib-qunit");
+require( "load-grunt-tasks" )( grunt );
 
 grunt.initConfig({
 	pkg: grunt.file.readJSON("package.json"),

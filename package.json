@@ -13,21 +13,11 @@
 		"grunt-contrib-qunit": "1.0.1",
 		"jquery-mousewheel": "3.1.12",
 		"jquery-simulate": "1.0.2",
+		"load-grunt-tasks": "3.4.0",
 		"qunitjs": "1.18.0",
 		"qunit-assert-classes": "1.0.2",
 		"qunit-assert-close": "JamesMGreene/qunit-assert-close#v1.1.1",
 		"requirejs": "2.1.14"
 	},
-	"bundledDependencies": [
-		"grunt",
-		"grunt-cli",
-		"grunt-contrib-qunit",
-		"jquery-mousewheel",
-		"jquery-simulate",
-		"qunitjs",
-		"qunit-assert-classes",
-		"qunit-assert-close",
-		"requirejs"
-	],
 	"keywords": []
 }
