@@ -3,6 +3,7 @@
 	"title": "jQuery UI Drupal fork tests",
 	"description": "Qunit tests specifically for Drupal core's fork of jQuery UI",
 	"version": "1.12.1-0.0",
+	"license": "MIT",
 	"scripts": {
 		"test": "grunt"
 	},
