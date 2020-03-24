@@ -18,6 +18,6 @@ if ( modules ) {
 }
 
 // Load the QUnit stylesheet
-includeStyle( "node_modules/qunitjs/qunit/qunit.css" );
+includeStyle( "../qunitjs/qunit/qunit.css" );
 
 } )();

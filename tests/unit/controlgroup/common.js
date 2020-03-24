@@ -2,9 +2,7 @@ define( [
 	"lib/common",
 	"ui/widgets/controlgroup",
 	"ui/widgets/checkboxradio",
-	"ui/widgets/selectmenu",
-	"ui/widgets/button",
-	"ui/widgets/spinner"
+	"ui/widgets/button"
 ], function( common ) {
 
 common.testWidget( "controlgroup", {

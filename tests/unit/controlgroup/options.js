@@ -3,9 +3,7 @@ define( [
 	"jquery",
 	"ui/widgets/controlgroup",
 	"ui/widgets/checkboxradio",
-	"ui/widgets/selectmenu",
-	"ui/widgets/button",
-	"ui/widgets/spinner"
+	"ui/widgets/button"
 ], function( QUnit, $ ) {
 
 QUnit.module( "Controlgroup: options" );
@@ -14,7 +12,7 @@ QUnit.test( "disabled", function( assert ) {
 	assert.expect( 4 );
 	var element = $( ".controlgroup" ).controlgroup().controlgroup( "option", "disabled", true );
 	assert.lacksClasses( element, "ui-state-disabled" );
-	assert.equal( element.find( ".ui-state-disabled" ).length, 9, "Child widgets are disabled" );
+	assert.equal( element.find( ".ui-state-disabled" ).length, 3, "Child widgets are disabled" );
 
 	element.controlgroup( "option", "disabled", false );
 	assert.lacksClasses( element, "ui-state-disabled" );
@@ -46,11 +44,11 @@ QUnit.test( "items: custom selector", function( assert ) {
 	assert.expect( 1 );
 	var element = $( ".controlgroup" ).controlgroup( {
 		items: {
-			"button": ".button"
+			"button": "select",
 		}
 	} );
 	assert.strictEqual( element.children( ".ui-button" ).length, 4,
-		"Correct child widgets are called when custom selector used" );
+		"Correct child widgets are called when custom selector used" + document.querySelector('.controlgroup').outerHTML);
 } );
 
 $.widget( "ui.test", {
@@ -70,7 +68,7 @@ QUnit.test( "items: custom widget", function( assert ) {
 		}
 	} );
 
-	assert.strictEqual( element.children( ".ui-button" ).length, 7,
+	assert.strictEqual( element.children( ".ui-button" ).length, 4,
 		"Correct child widgets are called when custom selector used" );
 	assert.strictEqual( element.children( ".ui-test" ).length, 1,
 		"Custom widget called" );
@@ -100,7 +98,7 @@ QUnit.test( "direction", function( assert ) {
 
 	assert.hasClasses( element, "ui-controlgroup-horizontal" );
 	assert.hasClasses( buttons.first(), "ui-corner-left" );
-	assert.hasClasses( buttons.last(), "ui-corner-right" );
+	assert.hasClasses( buttons.last(), "ui-corner-right", document.querySelector('.controlgroup').outerHTML );
 
 	element.controlgroup( "option", "direction", "vertical" );
 	assert.hasClasses( element, "ui-controlgroup-vertical" );

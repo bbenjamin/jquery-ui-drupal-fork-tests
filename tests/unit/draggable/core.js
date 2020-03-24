@@ -3,7 +3,6 @@ define( [
 	"jquery",
 	"./helper",
 	"ui/widgets/draggable",
-	"ui/widgets/droppable",
 	"ui/widgets/resizable"
 ], function( QUnit, $, testHelper ) {
 
@@ -77,35 +76,36 @@ QUnit.test( "resizable handle with complex markup (#8756 / #8757)", function( as
 	assert.equal( target.width(), 200, "compare width" );
 } );
 
-QUnit.test( "#8269: Removing draggable element on drop", function( assert ) {
-	assert.expect( 2 );
-
-	var element = $( "#draggable1" ).wrap( "<div id='wrapper' />" ).draggable( {
-			stop: function() {
-				assert.ok( true, "stop still called despite element being removed from DOM on drop" );
-			}
-		} ),
-		dropOffset = $( "#droppable" ).offset();
-
-	$( "#droppable" ).droppable( {
-		drop: function() {
-			$( "#wrapper" ).remove();
-			assert.ok( true, "element removed from DOM on drop" );
-		}
-	} );
-
-	// Support: Opera 12.10, Safari 5.1, jQuery <1.8
-	if ( testHelper.unreliableContains ) {
-		assert.ok( true, "Opera <12.14 and Safari <6.0 report wrong values for $.contains in jQuery < 1.8" );
-		assert.ok( true, "Opera <12.14 and Safari <6.0 report wrong values for $.contains in jQuery < 1.8" );
-	} else {
-		element.simulate( "drag", {
-			handle: "corner",
-			x: dropOffset.left,
-			y: dropOffset.top
-		} );
-	}
-} );
+// Test skipped because core does not include Droppable.
+// QUnit.test( "#8269: Removing draggable element on drop", function( assert ) {
+// 	assert.expect( 2 );
+//
+// 	var element = $( "#draggable1" ).wrap( "<div id='wrapper' />" ).draggable( {
+// 			stop: function() {
+// 				assert.ok( true, "stop still called despite element being removed from DOM on drop" );
+// 			}
+// 		} ),
+// 		dropOffset = $( "#droppable" ).offset();
+//
+// 	$( "#droppable" ).droppable( {
+// 		drop: function() {
+// 			$( "#wrapper" ).remove();
+// 			assert.ok( true, "element removed from DOM on drop" );
+// 		}
+// 	} );
+//
+// 	// Support: Opera 12.10, Safari 5.1, jQuery <1.8
+// 	if ( testHelper.unreliableContains ) {
+// 		assert.ok( true, "Opera <12.14 and Safari <6.0 report wrong values for $.contains in jQuery < 1.8" );
+// 		assert.ok( true, "Opera <12.14 and Safari <6.0 report wrong values for $.contains in jQuery < 1.8" );
+// 	} else {
+// 		element.simulate( "drag", {
+// 			handle: "corner",
+// 			x: dropOffset.left,
+// 			y: dropOffset.top
+// 		} );
+// 	}
+// } );
 
 // http://bugs.jqueryui.com/ticket/7778
 // drag element breaks in IE8 when its content is replaced onmousedown

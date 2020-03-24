@@ -1,15 +1,16 @@
 ( function() {
-
+//		"jquery": "../../../../../assets/vendor/jquery/jquery",
+	//"jquery": "../../../external/jquery/jquery",
 requirejs.config( {
 	paths: {
-		"jquery": "../../../external/jquery/jquery",
-		"jquery-simulate": "../../../node_modules/jquery-simulate/jquery.simulate",
+		"jquery": "../../../../../assets/vendor/jquery/jquery",
+		"jquery-simulate": "../../../../jquery-simulate/jquery.simulate",
 		"lib": "../../lib",
-		"phantom-bridge": "../../../node_modules/grunt-contrib-qunit/phantomjs/bridge",
-		"qunit-assert-classes": "../../../node_modules/qunit-assert-classes/qunit-assert-classes",
-		"qunit-assert-close": "../../../node_modules/qunit-assert-close/qunit-assert-close",
-		"qunit": "../../../node_modules/qunitjs/qunit/qunit",
-		"ui": "../../../ui"
+		"phantom-bridge": "../../../../grunt-contrib-qunit/phantomjs/bridge",
+		"qunit-assert-classes": "../../../../qunit-assert-classes/qunit-assert-classes",
+		"qunit-assert-close": "../../../../qunit-assert-close/qunit-assert-close",
+		"qunit": "../../../../qunitjs/qunit/qunit",
+		"ui": "../../../../../assets/vendor/jquery.ui/ui"
 	},
 	shim: {
 		"jquery-simulate": [ "jquery" ],

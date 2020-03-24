@@ -3,8 +3,6 @@ define( [
 	"jquery",
 	"./helper",
 	"ui/widgets/dialog",
-	"ui/effects/effect-blind",
-	"ui/effects/effect-explode"
 ], function( QUnit, $, testHelper ) {
 
 QUnit.module( "dialog: options" );
@@ -520,31 +518,35 @@ QUnit.test( "#4826: setting resizable false toggles resizable on dialog", functi
 
 } );
 
-QUnit.test( "#8051 - 'Explode' dialog animation causes crash in IE 6, 7 and 8", function( assert ) {
-	var ready = assert.async();
-	assert.expect( 1 );
-	var element = $( "<div></div>" ).dialog( {
-		show: "explode",
-		focus: function() {
-			assert.ok( true, "dialog opened with animation" );
-			element.remove();
-			ready();
-		}
-	} );
-} );
+// Skipped because it uses the explode effect, and effects are not part of
+// core's jQueryUI fork.
+// QUnit.test( "#8051 - 'Explode' dialog animation causes crash in IE 6, 7 and 8", function( assert ) {
+// 	var ready = assert.async();
+// 	assert.expect( 1 );
+// 	var element = $( "<div></div>" ).dialog( {
+// 		show: "explode",
+// 		focus: function() {
+// 			assert.ok( true, "dialog opened with animation" );
+// 			element.remove();
+// 			ready();
+// 		}
+// 	} );
+// } );
 
-QUnit.test( "#4421 - Focus lost from dialog which uses show-effect", function( assert ) {
-	var ready = assert.async();
-	assert.expect( 1 );
-	var element = $( "<div></div>" ).dialog( {
-		show: "blind",
-		focus: function() {
-			assert.equal( element.dialog( "widget" ).find( document.activeElement ).length, 1, "dialog maintains focus" );
-			element.remove();
-			ready();
-		}
-	} );
-} );
+// Skipped because it uses show-effect and effects are not part of core's
+// core's jQueryUI fork.
+// QUnit.test( "#4421 - Focus lost from dialog which uses show-effect", function( assert ) {
+// 	var ready = assert.async();
+// 	assert.expect( 1 );
+// 	var element = $( "<div></div>" ).dialog( {
+// 		show: "blind",
+// 		focus: function() {
+// 			assert.equal( element.dialog( "widget" ).find( document.activeElement ).length, 1, "dialog maintains focus" );
+// 			element.remove();
+// 			ready();
+// 		}
+// 	} );
+// } );
 
 QUnit.test( "Open followed by close during show effect", function( assert ) {
 	var ready = assert.async();
