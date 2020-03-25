@@ -6,7 +6,7 @@ define( [
 
 QUnit.module( "autocomplete: methods" );
 
-// Skipped because this test does not work with jQuery >= 3.1.1
+// SKIPPED: because this test does not work with jQuery >= 3.1.1
 // QUnit.test( "destroy", function( assert ) {
 // 	assert.expect( 1 );
 // 	assert.domEqual( "#autocomplete", function() {

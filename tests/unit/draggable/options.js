@@ -249,7 +249,7 @@ QUnit.test( "cancelement, default, switching after initialization", function( as
 	testHelper.shouldNotDrag( assert, element, "cancel: input, input dragged", input );
 } );
 
-// Skipped because core does not use Droppable.
+// SKIPPED: because core does not use Droppable.
 // QUnit.test( "connectToSortable, dragging out of a sortable", function( assert ) {
 // 	assert.expect( 4 );
 //
@@ -297,7 +297,7 @@ QUnit.test( "cancelement, default, switching after initialization", function( as
 // 	} );
 // } );
 
-// Skipped because core does not use Droppable.
+// SKIPPED: because core does not use Droppable.
 // QUnit.test( "connectToSortable, dragging clone into sortable", function( assert ) {
 // 	var ready = assert.async();
 // 	assert.expect( 3 );
@@ -335,7 +335,7 @@ QUnit.test( "cancelement, default, switching after initialization", function( as
 // 	} );
 // } );
 
-// Skipped because core does not use Droppable.
+// SKIPPED: because core does not use Droppable.
 // QUnit.test( "connectToSortable, dragging multiple elements in and out of sortable", function( assert ) {
 // 	assert.expect( 1 );
 //
@@ -379,7 +379,7 @@ QUnit.test( "cancelement, default, switching after initialization", function( as
 // 	} );
 // } );
 
-// Skipped because core does not use Droppable.
+// SKIPPED: because core does not use Droppable.
 // QUnit.test( "connectToSortable, dragging through one sortable to a second", function( assert ) {
 // 	assert.expect( 2 );
 //
@@ -418,7 +418,7 @@ QUnit.test( "cancelement, default, switching after initialization", function( as
 // 	element.simulate( "drag", dragParams );
 // } );
 
-// Skipped because core does not use Droppable.
+// SKIPPED: because core does not use Droppable.
 // QUnit.test( "connectToSortable, dragging through a sortable", function( assert ) {
 // 	assert.expect( 1 );
 //
@@ -1010,7 +1010,7 @@ QUnit.test( "opacity, default, switching after initialization", function( assert
 	assert.equal( opacity, 1 );
 } );
 
-// Skipped because it is not working with the Drupal jQuery UI fork and the
+// SKIPPED: because it is not working with the Drupal jQuery UI fork and the
 // timebox ran out.
 // QUnit.test( "revert and revertDuration", function( assert ) {
 // 	var ready = assert.async();
@@ -1043,7 +1043,7 @@ QUnit.test( "opacity, default, switching after initialization", function( assert
 // 	} );
 // } );
 
-// Skipped because core does not use Droppable.
+// SKIPPED: because core does not use Droppable.
 // QUnit.test( "revert: valid", function( assert ) {
 // 	assert.expect( 2 );
 //
@@ -1057,7 +1057,7 @@ QUnit.test( "opacity, default, switching after initialization", function( assert
 // 	testHelper.shouldMovePositionButNotOffset( assert, element, "revert: valid reverts when dropped on a droppable" );
 // } );
 
-// Skipped because core does not use Droppable.
+// SKIPPED: because core does not use Droppable.
 // QUnit.test( "scope", function( assert ) {
 // 	assert.expect( 4 );
 //

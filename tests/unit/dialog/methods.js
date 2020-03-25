@@ -45,7 +45,7 @@ QUnit.test( "destroy", function( assert ) {
 		assert.equal( dialog.parent()[ 0 ], $( "#qunit-fixture" )[ 0 ] );
 		assert.equal( dialog.index(), 0 );
 	} );
-	// Skipping this assertion, as it stopped working with jQuery >=3.4.0
+	// SKIPPED: this assertion, as it stopped working with jQuery >=3.4.0
 	// assert.domEqual( "#form-dialog", function() {
 	// 	var dialog = $( "#form-dialog" ).dialog().dialog( "destroy" );
 	// 	assert.equal( dialog.parent()[ 0 ], $( "#qunit-fixture" )[ 0 ] );

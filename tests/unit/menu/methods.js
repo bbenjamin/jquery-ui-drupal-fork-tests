@@ -15,7 +15,7 @@ QUnit.module( "menu: methods", {
 	}
 } );
 
-// Skipped because this test does not work with jQuery >= 3.4.0
+// SKIPPED: because this test does not work with jQuery >= 3.4.0
 // QUnit.test( "destroy", function( assert ) {
 // 	assert.expect( 2 );
 // 	assert.domEqual( "#menu2", function() {

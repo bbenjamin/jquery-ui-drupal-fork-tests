@@ -49,7 +49,7 @@ $.each( [ "checkbox", "radio" ], function( index, value ) {
 		assert.lacksClasses( widget, "ui-checkboxradio-checked" );
 	} );
 
-	// Skipped because this test does not work with jQuery >= 3.4.0
+	// SKIPPED: because this test does not work with jQuery >= 3.4.0
 	// QUnit.test( value + ": destroy", function( assert ) {
 	// 	assert.expect( 1 );
 	// 	assert.domEqual( "#" + value + "-method-destroy", function() {

@@ -116,7 +116,7 @@ QUnit.test( "focus tabbable", function( assert ) {
 		} );
 	}
 
-	// Skipping this step, as it stopped working with jQuery >=3.2.0
+	// SKIPPED: this step, as it stopped working with jQuery >=3.2.0
 	// function step1() {
 	// 	checkFocus( "<div><input><input></div>", options, function( done ) {
 	// 		var input = element.find( "input:last" ).trigger( "focus" ).trigger( "blur" );
@@ -267,7 +267,7 @@ QUnit.test( "#9048: multiple modal dialogs opened and closed in different order"
 	} );
 } );
 
-// Skipped because this test does not work with jQuery >= 3.1.1
+// SKIPPED: because this test does not work with jQuery >= 3.1.1
 // QUnit.test( "interaction between overlay and other dialogs", function( assert ) {
 // 	var ready = assert.async();
 // 	$.widget( "ui.testWidget", $.ui.dialog, {

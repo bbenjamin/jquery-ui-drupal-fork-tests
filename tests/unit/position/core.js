@@ -661,7 +661,7 @@ QUnit.test( "with scrollbars", function( assert ) {
 
 	var scrollbarInfo = $.position.getScrollInfo( $.position.getWithinInfo( $( "#scrollx" ) ) );
 
-	// Skipping assertion due to it not working with jQuery >= 3.2.0
+	// SKIPPED: assertion due to it not working with jQuery >= 3.2.0
 	// collisionTest( assert, {
 	// 	of: "#scrollx",
 	// 	collision: "fit",
@@ -675,7 +675,7 @@ QUnit.test( "with scrollbars", function( assert ) {
 	// 	overflow: "auto"
 	// } );
 
-	// Skipping assertion due to it not working with jQuery >= 3.2.0
+	// SKIPPED: assertion due to it not working with jQuery >= 3.2.0
 	// collisionTest( assert, {
 	// 	of: "#scrollx",
 	// 	collision: "fit",
@@ -689,7 +689,7 @@ QUnit.test( "with scrollbars", function( assert ) {
 		overflow: "auto"
 	} ).append( $( "<div>" ).height( 300 ).width( 300 ) );
 
-	// Skipping assertion due to it not working with jQuery >= 3.2.0
+	// SKIPPED: assertion due to it not working with jQuery >= 3.2.0
 	// collisionTest( assert, {
 	// 	of: "#scrollx",
 	// 	collision: "fit",

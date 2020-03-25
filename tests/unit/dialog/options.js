@@ -518,7 +518,7 @@ QUnit.test( "#4826: setting resizable false toggles resizable on dialog", functi
 
 } );
 
-// Skipped because it uses the explode effect, and effects are not part of
+// SKIPPED: because it uses the explode effect, and effects are not part of
 // core's jQueryUI fork.
 // QUnit.test( "#8051 - 'Explode' dialog animation causes crash in IE 6, 7 and 8", function( assert ) {
 // 	var ready = assert.async();
@@ -533,7 +533,7 @@ QUnit.test( "#4826: setting resizable false toggles resizable on dialog", functi
 // 	} );
 // } );
 
-// Skipped because it uses show-effect and effects are not part of core's
+// SKIPPED: because it uses show-effect and effects are not part of core's
 // core's jQueryUI fork.
 // QUnit.test( "#4421 - Focus lost from dialog which uses show-effect", function( assert ) {
 // 	var ready = assert.async();

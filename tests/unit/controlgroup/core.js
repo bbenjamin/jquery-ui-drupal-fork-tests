@@ -8,7 +8,7 @@ define( [
 
 QUnit.module( "Controlgroup: Core" );
 
-// SKIP TEST: selectmenu was removed from core.
+// SKIPPED: selectmenu was removed from core.
 // QUnit.test( "selectmenu: open/close corners", function( assert ) {
 // 	assert.expect( 12 );
 // 	var element = $( ".controlgroup" ).controlgroup(),
@@ -65,7 +65,7 @@ QUnit.module( "Controlgroup: Core" );
 // 		"vertical: Last selectmenu gets ui-corner-bottom when closed" );
 // } );
 
-// SKIP TEST: selectmenu was removed from core.
+// SKIPPED: selectmenu was removed from core.
 // QUnit.test( "selectmenu: controlgroupLabel", function( assert ) {
 // 	assert.expect( 2 );
 // 	var element = $( ".controlgroup" ).controlgroup();
@@ -75,7 +75,7 @@ QUnit.module( "Controlgroup: Core" );
 // 	assert.hasClasses( label.find( "span" ), "ui-controlgroup-label-contents" );
 // } );
 
-// SKIP TEST: selectmenu was removed from core.
+// SKIPPED: selectmenu was removed from core.
 // var assertSanatized = function( assert, initClasses, expectedClasses, message ) {
 // 	var selectmenu = $( "#select-sanatize" ).selectmenu( {
 // 		classes: {
@@ -101,7 +101,7 @@ QUnit.test( "_resolveClassesValues", function( assert ) {
 	assertSanatized( assert, "bar", "bar", "No corner classes" );
 } );
 
-// SKIP TEST: selectmenu was removed from core.
+// SKIPPED: selectmenu was removed from core.
 // QUnit.test( "Single controlgroup select - horizontal", function( assert ) {
 // 	assert.expect( 4 );
 // 	var group = $( ".controlgroup-single-select" ).controlgroup();
@@ -119,7 +119,7 @@ QUnit.test( "_resolveClassesValues", function( assert ) {
 // 		" ui-corner-tr ui-corner-tl ui-corner-bl ui corner-br" );
 // } );
 
-// SKIP TEST: selectmenu was removed from core.
+// SKIPPED: selectmenu was removed from core.
 // QUnit.test( "Single controlgroup select - vertical", function( assert ) {
 // 	assert.expect( 4 );
 // 	var group = $( ".controlgroup-single-select" ).controlgroup( {
@@ -163,7 +163,7 @@ QUnit.test( "Single controlgroup button - vertical", function( assert ) {
 		" ui-corner-tr ui-corner-tl ui-corner-bl ui corner-br" );
 } );
 
-// SKIP TEST: selectmenu was removed from core.
+// SKIPPED: selectmenu was removed from core.
 // QUnit.module( "Controlgroup: Non-empty class key", {
 // 	setup: function() {
 // 		this.classKey = $.ui.selectmenu.prototype.options.classes[ "ui-selectmenu-button-closed" ];
@@ -183,7 +183,7 @@ QUnit.test( "Controlgroup instantiates child widgets with correct options", func
 	assert.hasClasses( $( "#class-key-init-child" ).next(), "something-custom" );
 } );
 
-// SKIP TEST: selectmenu was removed from core.
+// SKIPPED: selectmenu was removed from core.
 // QUnit.test( "Controlgroup correctly assigns child widget classes options key", function( assert ) {
 // 	assert.expect( 2 );
 //

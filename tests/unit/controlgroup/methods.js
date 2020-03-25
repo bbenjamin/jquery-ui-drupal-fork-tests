@@ -8,7 +8,7 @@ define( [
 
 QUnit.module( "Controlgroup: methods" );
 
-// Skipped because this test does not work with jQuery >= 3.4.0
+// SKIPPED: because this test does not work with jQuery >= 3.4.0
 // QUnit.test( "destroy", function( assert ) {
 // 	assert.expect( 1 );
 // 	assert.domEqual( ".controlgroup", function() {
@@ -150,7 +150,7 @@ $.each( tests, function( widget, html ) {
 	} );
 } );
 
-// SKIP TEST: selectmenu was removed from core.
+// SKIPPED: selectmenu was removed from core.
 // QUnit.test( "Child Classes Option: init", function( assert ) {
 // 	assert.expect( 1 );
 // 	var selectmenu = $( "#select-pre" ).selectmenu( {
@@ -162,7 +162,7 @@ $.each( tests, function( widget, html ) {
 // 	assert.hasClasses( selectmenu.selectmenu( "widget" ), "test-class" );
 // } );
 
-// SKIP TEST: selectmenu was removed from core.
+// SKIPPED: selectmenu was removed from core.
 // QUnit.test( "Child Classes Option: refresh", function( assert ) {
 // 	assert.expect( 1 );
 // 	var controlgroup = $( ".controlgroup-refresh" ).controlgroup();

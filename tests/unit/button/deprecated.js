@@ -29,7 +29,7 @@ QUnit.test( "Calling buttonset calls controlgroup", function( assert ) {
 
 QUnit.module( "Button (deprecated): methods" );
 
-// Skipped because this test does not work with jQuery >= 3.4.0
+// SKIPPED: because this test does not work with jQuery >= 3.4.0
 // QUnit.test( "destroy", function( assert ) {
 // 	assert.expect( 1 );
 // 	assert.domEqual( "#checkbox02", function() {
