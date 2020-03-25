@@ -249,21 +249,21 @@ QUnit.test( "height", function( assert ) {
 	assert.expect( 4 );
 
 	var element = $( "<div></div>" ).dialog();
-		assert.equal( element.dialog( "widget" ).outerHeight(), 150, "default height" );
+		assert.equal( Math.ceil(element.dialog( "widget" ).outerHeight()), 150, "default height" );
 	element.remove();
 
 	element = $( "<div></div>" ).dialog( { height: 237 } );
-		assert.equal( element.dialog( "widget" ).outerHeight(), 237, "explicit height" );
+		assert.equal( Math.ceil(element.dialog( "widget" ).outerHeight()), 237, "explicit height" );
 	element.remove();
 
 	element = $( "<div></div>" ).dialog();
 		element.dialog( "option", "height", 238 );
-		assert.equal( element.dialog( "widget" ).outerHeight(), 238, "explicit height set after init" );
+		assert.equal( Math.ceil(element.dialog( "widget" ).outerHeight()), 238, "explicit height set after init" );
 	element.remove();
 
 	element = $( "<div></div>" ).css( "padding", "20px" )
 		.dialog( { height: 240 } );
-		assert.equal( element.dialog( "widget" ).outerHeight(), 240, "explicit height with padding" );
+		assert.equal( Math.ceil(element.dialog( "widget" ).outerHeight()), 240, "explicit height with padding" );
 	element.remove();
 } );
 

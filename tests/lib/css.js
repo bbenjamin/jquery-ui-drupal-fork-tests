@@ -1,7 +1,7 @@
 ( function() {
 
 function includeStyle( url ) {
-	document.write( "<link rel='stylesheet' href='../../../" + url + "'>" );
+	document.write( "<link rel='stylesheet' href='../../../../" + url + "'>" );
 }
 
 // Find the script element
@@ -13,11 +13,11 @@ var modules = script.getAttribute( "data-modules" );
 if ( modules ) {
 	modules = modules.split( /\s+/ );
 	for ( var i = 0; i < modules.length; i++ ) {
-		includeStyle( "themes/base/" + modules[ i ] + ".css" );
+		includeStyle( "../assets/vendor/jquery.ui/themes/base/" + modules[ i ] + ".css" );
 	}
 }
 
 // Load the QUnit stylesheet
-includeStyle( "../qunitjs/qunit/qunit.css" );
+includeStyle( "qunitjs/qunit/qunit.css" );
 
 } )();
