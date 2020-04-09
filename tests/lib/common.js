@@ -68,7 +68,6 @@ function testBasicUsage( widget ) {
 exports.testWidget = function( widget, settings ) {
 	QUnit.module( widget + ": common widget" );
 
-	// exports.testJshint( "/widgets/" + widget );
 	testWidgetDefaults( widget, settings.defaults );
 	testWidgetOverrides( widget );
 	if ( !settings.noDefaultElement ) {

@@ -1,30 +1,49 @@
-# [jQuery UI](http://jqueryui.com/) - Interactions and Widgets for the web
+# Tests for Drupal core's fork of jQuery UI.
 
-jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of jQuery. Whether you're building highly interactive web applications, or you just need to add a date picker to a form control, jQuery UI is the perfect choice.
+## Why is there a Drupal core fork of jQuery UI?
+jQuery UI was [added to Drupal core in 2009](https://www.drupal.org/node/315035)
+, but jQuery UI has been unmaintained since 2017 and listed as an **Emeritus project** in
+[https://openjsf.org/projects/](https://openjsf.org/projects/).
+It describes an Emeritus project as:
+> Emeritus projects are those which the maintainers feel have reached or are nearing end-of-life**
 
-If you want to use jQuery UI, go to [jqueryui.com](http://jqueryui.com) to get started, [jqueryui.com/demos/](http://jqueryui.com/demos/) for demos, [api.jqueryui.com](http://api.jqueryui.com/) for API documentation, or the [Using jQuery UI Forum](http://forum.jquery.com/using-jquery-ui) for discussions and questions.
+Drupal is in the process of removing jQueryUI, but some components have not yet
+been replaced. To ensure these components are maintained, Drupal now uses a fork
+of jQuery UI 1.12.1 that includes only the components in use.
 
-If you want to report a bug/issue, please visit [bugs.jqueryui.com](http://bugs.jqueryui.com).
+## About the tests
 
-If you are interested in helping develop jQuery UI, you are in the right place.
-To discuss development with team members and the community, visit the [Developing jQuery UI Forum](http://forum.jquery.com/developing-jquery-ui) or [#jqueryui-dev on irc.freenode.net](http://irc.jquery.org/).
+The Drupal fork of jQuery UI still needs test coverage. This is a refactor of
+jQuery UI's Qunit tests built to be run by Drupal.org's CI. Dependencies were
+reduced to only the ones necessary for Drupal's purposes, and many tests were
+removed for these reasons: 
+- They require a jQuery UI component that is not included in Drupal's fork
+- The tests fail due to incompatibility with jQuery 3.4.1, the version used in
+Drupal core. The tests in jQuery UI are only guaranteed to work up to jQuery
+3.1.0. Tests that do not work with newer versions of jQuery have been commented
+out and noted which version of jQuery they ceased working in.
 
+## What Components are Tested?
+- autocomplete
+- button
+- checkboxradio
+- controlgroup
+- core
+- dialog
+- draggable
+- form-reset-mixin
+- menu
+- position
+- resizable
+- widget
 
-## For Contributors
+## Running the Tests
+These must be run from Drupal's /core directory. Run 
+```yarn --cwd node_modules/jquery-ui-drupal-fork-tests test``` to run every test
+in the suite.
 
-If you want to help and provide a patch for a bugfix or new feature, please take
-a few minutes and look at [our Getting Involved guide](http://wiki.jqueryui.com/w/page/35263114/Getting-Involved).
-In particular check out the [Coding standards](http://wiki.jqueryui.com/w/page/12137737/Coding-standards)
-and [Commit Message Style Guide](http://contribute.jquery.org/commits-and-pull-requests/#commit-guidelines).
+### Options
+``--component=<componentName>`` to run the tests for a single component
 
-In general, fork the project, create a branch for a specific change and send a
-pull request for that branch. Don't mix unrelated changes. You can use the commit
-message as the description for the pull request.
-
-For more information, see the [contributing page](CONTRIBUTING.md).
-
-## Running the Unit Tests
-
-Run the unit tests manually with appropriate browsers and any local web server. See our [environment setup](CONTRIBUTING.md#environment-minimum-required) and [information on running tests](CONTRIBUTING.md#running-the-tests).
-
-You can also run the unit tests inside phantomjs by [setting up your environment](CONTRIBUTING.md#user-content-environment-recommended-setup).
+``--skip=<componentName,componentName>`` to skip a component in the tests.
+Note that this option can't be used alongside ``--component``.
