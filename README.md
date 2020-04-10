@@ -47,3 +47,6 @@ in the suite.
 
 ``--skip=<componentName,componentName>`` to skip a component in the tests.
 Note that this option can't be used alongside ``--component``.
+
+## License
+MIT
