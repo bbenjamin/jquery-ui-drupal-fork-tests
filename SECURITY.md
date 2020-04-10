@@ -3,6 +3,8 @@
 ## Scope
 This policy is only applicable to this project's use in Drupal core. Uses ouside of Drupal core are not covered.  
 
+This project will no longer be supported when there is no longer a supported version of Drupal core using it.
+
 ## Supported Versions
 
 | Version | Supported          |
